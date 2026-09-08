@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Advanced Programming — ELTE Faculty of Social Sciences, Autumn 2026</title>
+<meta name="description" content="Course page: slides, sessions and materials. ELTE TáTK, Department of Statistics, 2026/27/1.">
+<link rel="stylesheet" href="betuk/betuk.css">
+<style>
+:root{
+  --papir:#FBFAF7; --papir-melyebb:#F1EEE7; --tinta:#17191C; --tinta-halvany:#5E626A;
+  --vonal:#DBD6CC; --allitas:#9A6B10; --allitas-halvany:#F6EEDC;
+  --meres:#0E5560; --meres-halvany:#E2EDEF;
+  --betu-proza:"Source Serif 4",Charter,Georgia,serif;
+  --betu-jelzes:"Source Sans 3",-apple-system,"Segoe UI",system-ui,sans-serif;
+  --betu-kod:"Source Code Pro",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --papir:#14161A; --papir-melyebb:#1E2127; --tinta:#F2F0EB; --tinta-halvany:#A2A7B0;
+    --vonal:#343941; --allitas:#E0B45A; --allitas-halvany:#2A2418;
+    --meres:#7FC3CE; --meres-halvany:#12262B;
+  }
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--papir);color:var(--tinta);
+  font-family:var(--betu-proza);font-size:19px;line-height:1.5;
+  -webkit-font-smoothing:antialiased}
+.wrap{max-width:44rem;margin:0 auto;padding:clamp(2rem,6vw,4.5rem) clamp(1.1rem,5vw,2rem) 4rem}
+.jelzes{font-family:var(--betu-jelzes);font-size:.7rem;font-weight:600;
+  letter-spacing:.12em;text-transform:uppercase;color:var(--tinta-halvany)}
+h1{font-size:clamp(2.1rem,7vw,3.1rem);line-height:1.1;font-weight:600;
+  margin:.5rem 0 0;letter-spacing:-.015em}
+.lead{font-size:1.12rem;color:var(--tinta-halvany);margin:1.1rem 0 0;max-width:34rem}
+hr{border:0;border-top:1px solid var(--vonal);margin:2.75rem 0}
+h2{font-family:var(--betu-jelzes);font-size:.72rem;font-weight:600;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--tinta-halvany);margin:0 0 1rem}
+
+/* current session card */
+.most{display:block;text-decoration:none;color:inherit;
+  background:var(--meres-halvany);border-left:3px solid var(--meres);
+  padding:1.4rem 1.5rem;border-radius:3px;transition:transform .12s ease}
+.most:hover{transform:translateX(2px)}
+.most .cim{font-size:1.5rem;font-weight:600;line-height:1.2;margin:.3rem 0 .45rem}
+.most .nyil{font-family:var(--betu-jelzes);font-size:.82rem;font-weight:600;color:var(--meres)}
+
+/* schedule */
+table{width:100%;border-collapse:collapse;font-size:.92rem}
+th{font-family:var(--betu-jelzes);font-size:.66rem;font-weight:600;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--tinta-halvany);text-align:left;
+  padding:0 .7rem .5rem 0;border-bottom:1px solid var(--vonal)}
+td{padding:.62rem .7rem .62rem 0;border-bottom:1px solid var(--vonal);vertical-align:baseline}
+td:first-child{font-family:var(--betu-jelzes);font-size:.8rem;color:var(--tinta-halvany);
+  width:2.2rem;font-variant-numeric:tabular-nums}
+td.datum{font-family:var(--betu-jelzes);font-size:.78rem;color:var(--tinta-halvany);
+  white-space:nowrap;width:5.5rem}
+tr.szunet td{color:var(--tinta-halvany);font-style:italic}
+tr.most-sor td{font-weight:600}
+a{color:var(--meres)}
+a.dia{font-weight:600;text-decoration-thickness:1px;text-underline-offset:2px}
+footer{margin-top:3rem;font-family:var(--betu-jelzes);font-size:.78rem;
+  color:var(--tinta-halvany);line-height:1.6}
+footer a{color:var(--tinta-halvany)}
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="jelzes">ELTE Faculty of Social Sciences · Department of Statistics · Autumn 2026</div>
+    <h1>Advanced&nbsp;Programming</h1>
+    <p class="lead">You take a Python project of your own from idea, through
+    specification and verified implementation, to a reproducible release that
+    produces a result other people can understand — working with an AI-supported
+    development process throughout.</p>
+  </header>
+
+  <hr>
+
+  <h2>Current session</h2>
+  <a class="most" href="01.pdf">
+    <div class="jelzes">Session 1 · 8 September 2026</div>
+    <div class="cim">Course launch: the 2026 situation</div>
+    <div class="nyil">Open the slides (PDF) →</div>
+  </a>
+
+  <hr>
+
+  <h2>Sessions</h2>
+  <table>
+    <thead><tr><th></th><th>Date</th><th>Topic</th></tr></thead>
+    <tbody>
+      <tr class="most-sor"><td>1</td><td class="datum">8 Sep</td><td><a class="dia" href="01.pdf">Course launch, goals, agent demo</a></td></tr>
+      <tr><td>2</td><td class="datum">15 Sep</td><td>Problem, user, result; repository and README</td></tr>
+      <tr><td>3</td><td class="datum">22 Sep</td><td>Requirements, system boundary, acceptance examples</td></tr>
+      <tr><td>4</td><td class="datum">29 Sep</td><td>Feasibility spikes; LLM API, secrets, structured output</td></tr>
+      <tr><td>5</td><td class="datum">6 Oct</td><td>Data flow, module boundaries, walking skeleton</td></tr>
+      <tr><td>6</td><td class="datum">13 Oct</td><td>Test oracles and pytest; gold sample and quality metrics</td></tr>
+      <tr><td>7</td><td class="datum">20 Oct</td><td>A small feature with an agent; batch processing and first figure</td></tr>
+      <tr class="szunet"><td>8</td><td class="datum">27 Oct</td><td>Autumn break — no class</td></tr>
+      <tr class="szunet"><td>9</td><td class="datum">3 Nov</td><td>Independent work session — no class</td></tr>
+      <tr><td>10</td><td class="datum">10 Nov</td><td>Integration, bug reproduction and targeted fixes</td></tr>
+      <tr><td>11</td><td class="datum">17 Nov</td><td>Human and AI code review</td></tr>
+      <tr><td>12</td><td class="datum">24 Nov</td><td>Dependencies, configuration, CI and release</td></tr>
+      <tr><td>13</td><td class="datum">1 Dec</td><td>User journey, documentation test, regeneration trial</td></tr>
+      <tr><td>14</td><td class="datum">8 Dec</td><td>Project presentations, defence and retrospective</td></tr>
+    </tbody>
+  </table>
+
+  <footer>
+    Instructor: Árpád Tamási · <a href="mailto:arpad.tamasi@goschool.ai">arpad.tamasi@goschool.ai</a><br>
+    Slides and materials: <a href="https://github.com/tatk-advp-2026">github.com/tatk-advp-2026</a>
+  </footer>
+</div>
