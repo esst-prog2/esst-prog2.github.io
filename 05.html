@@ -1234,198 +1234,198 @@ right: 18px; bottom: 12px;
 </section>
 <section id="alterego-finder" class="slide level2 meres">
 <h2 class="meres">AlterEgo Finder</h2>
-<p><strong>The promise.</strong> A HIGH_CONFIDENCE match is trustworthy: a face that is not in the dataset gets one at most about 1% of the time.</p>
-<p><strong>Your spike.</strong> How often does a stranger match “high”? → <strong>99% at 500 faces</strong>. You searched with people absent from collections of 50, 500 and 5,000 faces.</p>
-<p><strong>We broke it.</strong> We removed the upper threshold, so every match above “low” becomes HIGH_CONFIDENCE → <strong>43 tests, all green.</strong></p>
+<p><strong>What it does.</strong> Give it a face photo; it shows the three most similar faces in a collection and how sure it is.</p>
+<p><strong>What you found in Homework 4.</strong> With 500 faces in the collection, 99 of 100 strangers got a match it called very sure.</p>
+<p><strong>So right now:</strong> in a large collection, “very sure” does not mean the person is there.</p>
 <p><em>A test would go red if …</em></p>
 </section>
 <section id="blocky" class="slide level2 meres">
 <h2 class="meres">Blocky</h2>
-<p><strong>The promise.</strong> During a block, opening reddit.com shows “reddit.com is blocked until 17:00”, not an error page.</p>
-<p><strong>Your spike.</strong> How many blocked sites slip through? → <strong>1 of 10</strong>. You tried ten chosen sites in your usual and a fresh browser profile.</p>
-<p><strong>We broke it.</strong> We moved the app to port 8766 while the extension still calls 8765 → <strong>87 Python and 10 Node tests, all green.</strong></p>
+<p><strong>What it does.</strong> It blocks distracting websites on a weekly schedule; if you open one anyway, you get a page with better things to do.</p>
+<p><strong>What you found in Homework 4.</strong> Of ten sites chosen in advance, one (YouTube) still got through in your usual browser; you then changed the extension to step in earlier.</p>
+<p><strong>So right now:</strong> nobody has checked that the browser and the app together really show the “blocked” page.</p>
 <p><em>A test would go red if …</em></p>
 </section>
 <section id="budget-planner" class="slide level2 meres">
 <h2 class="meres">Budget Planner</h2>
-<p><strong>The promise.</strong> With a food plan of 200 and 190 already spent, one more 25 of groceries shows a red warning: “Food: 15 over plan.”</p>
-<p><strong>Your spike.</strong> Does a real month fit six categories? → <strong>Other 0–23%</strong>. You sorted your own September spending into the six categories.</p>
-<p><strong>We broke it.</strong> We switched the over-plan check off, so the warning never appears → <strong>8 tests, all green.</strong></p>
+<p><strong>What it does.</strong> You enter your income; it suggests a budget in six categories and warns when you overspend.</p>
+<p><strong>What you found in Homework 4.</strong> Sorting a real month of your own spending, about a quarter of the money fell under “other”.</p>
+<p><strong>So right now:</strong> a small month fits; a full month with cash is untried.</p>
 <p><em>A test would go red if …</em></p>
 </section>
 <section id="causal-lab" class="slide level2 meres">
 <h2 class="meres">CAUSAL LAB</h2>
-<p><strong>The promise.</strong> If treated and control trends already drift apart before treatment, the app flags it instead of calling it fine.</p>
-<p><strong>Your spike.</strong> How often do the checks cry wolf? → <strong>57.6 of 100</strong>. You ran the checks 200 times on a flawless simulated world, then with each bias switched on.</p>
-<p><strong>We broke it.</strong> We set the parallel-trends threshold so it can never warn → <strong>12 tests, all green.</strong></p>
+<p><strong>What it does.</strong> You give it data on a treated and an untreated group; it plots both, says whether they moved alike beforehand, and estimates the treatment’s effect.</p>
+<p><strong>What you found in Homework 4.</strong> On simulated data with nothing wrong in it, the app’s trust score averaged 57.6 out of 100, because several checks warn for nothing.</p>
+<p><strong>So right now:</strong> a low score does not yet tell users whether their data really has a problem.</p>
 <p><em>A test would go red if …</em></p>
 </section>
 <section id="central-european-air-traffic" class="slide level2 meres">
 <h2 class="meres">Central European air traffic</h2>
-<p><strong>The promise.</strong> A record with no position lands in the rejects table with a reason; the run still commits the rest.</p>
-<p><strong>Your spike.</strong> How much time did the collector cover? → <strong>6.8% of hours</strong>. You counted fully covered hours over two weeks: 23 of 337.</p>
-<p><strong>We broke it.</strong> We changed “OR” to “AND” in the missing-position rule, so a half-missing record vanishes → <strong>no test ran, so nothing could notice.</strong></p>
+<p><strong>What it does.</strong> It records planes over Central Europe on a schedule, so traffic over time can be asked about later.</p>
+<p><strong>What you found in Homework 4.</strong> You counted the fully captured hours over two weeks: only 23 of 337.</p>
+<p><strong>So right now:</strong> Answers about traffic over time would rest on data that is mostly gaps.</p>
 <p><em>A test would go red if …</em></p>
 </section>
 <section id="chatgpt-ads-industry-dashboard" class="slide level2 meres">
 <h2 class="meres">ChatGPT Ads Industry Dashboard</h2>
-<p><strong>The promise.</strong> The box plot shows real differences between industries, bigger than ordinary noise.</p>
-<p><strong>Your spike.</strong> Industry gap bigger than weekly noise? → <strong>143% vs 56%</strong>. You compared the real campaign’s week-to-week swing with the gap between industries.</p>
-<p><strong>We broke it.</strong> We gave every synthetic account the same click rate and cost per click. The gap shrank to 11%, the decision flipped → <strong>36 tests, all green.</strong></p>
+<p><strong>What it does.</strong> It groups ChatGPT ad accounts by industry and compares their spending, clicks and sales between industries.</p>
+<p><strong>What you found in Homework 4.</strong> The gap between industries looked bigger than the one real campaign’s week-to-week swing: 143% versus 56%. But only one industry has real data; the others are example figures.</p>
+<p><strong>So right now:</strong> the industry differences on the chart are not yet real.</p>
 <p><em>A test would go red if …</em></p>
 </section>
 <section id="data-jobs-skill-gap-finder-for-early-career-professionals" class="slide level2 meres">
 <h2 class="meres">Data Jobs &amp; Skill-Gap Finder for Early-Career Professionals</h2>
-<p><strong>The promise.</strong> Excel and R rank as distinctive skills, because “R&amp;D” and “excel in” are not counted.</p>
-<p><strong>Your spike.</strong> Are the skill labels true? → <strong>98.8% precision</strong>. You hand-labelled 50 postings, the same 50 the patterns were tuned on.</p>
-<p><strong>We broke it.</strong> We restored the old R and Excel patterns that match “R&amp;D” and “excel in” → <strong>13 tests, all green.</strong></p>
+<p><strong>What it does.</strong> For newcomers: from European data job ads, it shows which skills each data job asks for most.</p>
+<p><strong>What you found in Homework 4.</strong> You checked its skills against your own reading of 50 ads: right almost 99 times in 100.</p>
+<p><strong>So right now:</strong> an ad that says “R&amp;D” could be counted as asking for the skill “R”, and nothing would notice.</p>
 <p><em>A test would go red if …</em></p>
 </section>
 <section id="deriva" class="slide level2 meres">
 <h2 class="meres">deriva</h2>
-<p><strong>The promise.</strong> Between two survey rounds, the program separates cosmetic description changes from real ones, the way a person would.</p>
-<p><strong>Your spike.</strong> Does it read rounds it has never seen? → <strong>3 of 3</strong>. You loaded the 2022, 2023 and 2024 dictionaries without changing the code.</p>
-<p><strong>We broke it.</strong> The rule stopped ignoring one accent mark; the demo split moved from 9/13 to 8/14 → <strong>53 tests, all green.</strong></p>
+<p><strong>What it does.</strong> It compares two rounds of a labour survey and reports what changed, keeping real changes apart from cosmetic ones.</p>
+<p><strong>What you found in Homework 4.</strong> You tried three rounds it had never seen: 3 of 3 loaded unchanged.</p>
+<p><strong>So right now:</strong> it reads new rounds, but still calls many cosmetic changes real.</p>
 <p><em>A test would go red if …</em></p>
 </section>
 <section id="detective-game-with-llm-driven-npcs" class="slide level2 meres">
 <h2 class="meres">Detective game with LLM-driven NPCs</h2>
-<p><strong>The promise.</strong> A suspect never says anything that is not in their own approved answer, so they cannot reveal what they do not know.</p>
-<p><strong>Your spike.</strong> Does the real model path work? → <strong>30 of 30 · 2.2 s</strong>. You made 30 calls to the real model and checked each reply and its response time.</p>
-<p><strong>We broke it.</strong> We handed the model every suspect’s secrets in the prompt → <strong>11 tests, all green.</strong></p>
+<p><strong>What it does.</strong> A murder mystery: you question three suspects played by an AI, then name the killer.</p>
+<p><strong>What you found in Homework 4.</strong> In 30 real conversations, every reply passed the game’s check that suspects stick to what they know.</p>
+<p><strong>So right now:</strong> the short intro the AI adds before an answer is not checked, so a secret could slip out there.</p>
 <p><em>A test would go red if …</em></p>
 </section>
 <section id="european-bank-financial-data-loader" class="slide level2 meres">
 <h2 class="meres">European bank financial data loader</h2>
-<p><strong>The promise.</strong> For a chosen bank and period, the package returns the reported figures, ready for metrics such as RWA density.</p>
-<p><strong>Your spike.</strong> Do the two sources agree? → <strong>RWA density 44.5%</strong>. You checked the figures against the bank’s own published reports.</p>
-<p><strong>We broke it.</strong> We pointed risk-weighted assets at the wrong reporting item; RWA density would go above 100% → <strong>8 tests, all green.</strong></p>
+<p><strong>What it does.</strong> Pick a European bank and year; it gathers its key figures from two public sources into one table.</p>
+<p><strong>What you found in Homework 4.</strong> Checked against the bank’s own reports, the figures agree, and its risk ratio comes out at 44.5%.</p>
+<p><strong>So right now:</strong> right for one bank and one year; others are unchecked.</p>
 <p><em>A test would go red if …</em></p>
 </section>
 <section id="explainable-fraud-detection" class="slide level2 meres">
 <h2 class="meres">Explainable Fraud Detection</h2>
-<p><strong>The promise.</strong> The report gives a shortlist of the transactions worth a closer look, instead of scanning everything by hand.</p>
-<p><strong>Your spike.</strong> How many flags are real fraud? → <strong>68 of 500</strong>. You checked the flags against the fraud labels of a public dataset.</p>
-<p><strong>We broke it.</strong> We used the median instead of the average amount; flags on your slice jumped from 500 to 907 → <strong>58 tests, all green.</strong></p>
+<p><strong>What it does.</strong> It reads a list of card payments and picks the ones worth a closer look, saying why.</p>
+<p><strong>What you found in Homework 4.</strong> On a public dataset where fraud is already marked, 68 of its 500 picks were really fraud.</p>
+<p><strong>So right now:</strong> most of the short list is not fraud.</p>
 <p><em>A test would go red if …</em></p>
 </section>
 <section id="financial-planner" class="slide level2 meres">
 <h2 class="meres">Financial Planner</h2>
-<p><strong>The promise.</strong> Moves between your own accounts drop out of spending and income, and nothing else does, so the monthly summary is true.</p>
-<p><strong>Your spike.</strong> Does it categorise new shops? → <strong>64.8% new · 95.5% seen</strong>. You labelled 551 expense rows by hand and compared them with the program’s categories.</p>
-<p><strong>We broke it.</strong> We let a transfer match on any date, not only the same day → <strong>154 tests, all green.</strong></p>
+<p><strong>What it does.</strong> From your bank statements, it shows where your money went, by category, month by month and over the year.</p>
+<p><strong>What you found in Homework 4.</strong> You sorted a fresh month by hand: shops it knew were almost always right, new shops only about two in three.</p>
+<p><strong>So right now:</strong> spending at unfamiliar shops often lands in the wrong category.</p>
 <p><em>A test would go red if …</em></p>
 </section>
 <section id="market-research-platform" class="slide level2 meres">
 <h2 class="meres">Market Research Platform</h2>
-<p><strong>The promise.</strong> The report names each question’s leading answers with percentages, and every figure can be checked against the data.</p>
-<p><strong>Your spike.</strong> How tightly can a cell be estimated? → <strong>6–34 points wide</strong>. You computed the possible range for 35 cells from the aggregate export.</p>
-<p><strong>We broke it.</strong> We reversed the sort order, so the smallest answer is called “leading” (19.1% instead of 59.0%) → <strong>there are no tests to notice.</strong></p>
+<p><strong>What it does.</strong> Researchers load survey results and get a report organised by research goal.</p>
+<p><strong>What you found in Homework 4.</strong> You checked whether the summary tables can show answers by age group: they cannot — each estimate could be anything from zero up.</p>
+<p><strong>So right now:</strong> the screen is right to warn that such breakdowns are not available.</p>
 <p><em>A test would go red if …</em></p>
 </section>
 <section id="marketlens" class="slide level2 meres">
 <h2 class="meres">MarketLens</h2>
-<p><strong>The promise.</strong> Every expired forecast is scored against the actual closing price on its due date.</p>
-<p><strong>Your spike.</strong> Better than “always up”? → <strong>52.3% vs 54.8%</strong>. You replayed 501 days and compared the model’s hit rate with a rule that always says “Up”.</p>
-<p><strong>We broke it.</strong> We made scoring take the wrong day’s price (the day before, or the very first day) → <strong>26 tests, all green.</strong></p>
+<p><strong>What it does.</strong> Beginners practise investing with play money: it says whether stocks, bonds or gold will rise or fall, explains why, and tracks the portfolio at real prices.</p>
+<p><strong>What you found in Homework 4.</strong> Replaying past days, its forecasts were right slightly less often than a rule that always says “up”: 52 versus 55 in 100.</p>
+<p><strong>So right now:</strong> nobody has checked that an old forecast is scored against the right day’s price.</p>
 <p><em>A test would go red if …</em></p>
 </section>
 <section id="menstrual-cycle-phase-calculator-and-targeted-nutrition-planner" class="slide level2 meres">
 <h2 class="meres">Menstrual Cycle Phase Calculator and Targeted Nutrition Planner</h2>
-<p><strong>The promise.</strong> For today’s phase it prints the nutrients your evidence review pairs with it, each with its evidence rating.</p>
-<p><strong>Your spike.</strong> Is there a source for each claim? → <strong>7 of 12 (2 strong)</strong>. You checked the 12 phase–nutrient pairs against medical databases and official guidance.</p>
-<p><strong>We broke it.</strong> We swapped the nutrient lists of two phases in the rules file → <strong>57 tests, all green.</strong></p>
+<p><strong>What it does.</strong> From your last period and cycle length, it tells you your cycle phase, which nutrients to focus on, and writes a grocery list.</p>
+<p><strong>What you found in Homework 4.</strong> You looked for medical sources behind its advice: 7 of 12 pairings have one, but mostly for the whole cycle, not one phase.</p>
+<p><strong>So right now:</strong> users are not told how strong the evidence behind each suggestion is.</p>
 <p><em>A test would go red if …</em></p>
 </section>
 <section id="ms.-match" class="slide level2 meres">
 <h2 class="meres">Ms. Match</h2>
-<p><strong>The promise.</strong> On a rainy day (50% or more), the suggested shoes are rain-proof whenever you own such a pair.</p>
-<p><strong>Your spike.</strong> How many garments fit? → <strong>84 (63 your own)</strong>. You added ten of your own photos and measured how much browser storage each one takes.</p>
-<p><strong>We broke it.</strong> We removed the line that keeps only rain-proof shoes on rainy days → <strong>there are no tests to notice.</strong></p>
+<p><strong>What it does.</strong> You photograph your own clothes; it reads today’s forecast, and one click puts together an outfit shown on a photo of you.</p>
+<p><strong>What you found in Homework 4.</strong> Adding ten of your own photos, you measured that the browser holds about 63 of your own garments, close to the original guess.</p>
+<p><strong>So right now:</strong> on a rainy day the outfit button ignores the weather, so it may still pick trainers or high heels.</p>
 <p><em>A test would go red if …</em></p>
 </section>
 <section id="photo-duplicate-finder" class="slide level2 meres">
 <h2 class="meres">Photo Duplicate Finder</h2>
-<p><strong>The promise.</strong> At the default setting, bursts and resized copies land in one group, while photos that are merely similar stay apart.</p>
-<p><strong>Your spike.</strong> Which threshold is safe on real photos? → <strong>1, not 5</strong>. You ran thresholds 0 to 12 on about 300 of your own photos and compared group sizes.</p>
-<p><strong>We broke it.</strong> We changed the default threshold from 8 to 0, then to 25 → <strong>36 tests, all green.</strong></p>
+<p><strong>What it does.</strong> It finds copies and near-identical shots in a photo folder and suggests which to keep. It never deletes anything.</p>
+<p><strong>What you found in Homework 4.</strong> On about 300 of your own photos, only the strictest settings kept groups clean; the default chained unrelated photos together.</p>
+<p><strong>So right now:</strong> nobody knows yet whether today’s setting keeps bursts together and merely similar shots apart.</p>
 <p><em>A test would go red if …</em></p>
 </section>
 <section id="pixwars" class="slide level2 meres">
 <h2 class="meres">PixWars</h2>
-<p><strong>The promise.</strong> Two laptops on the room’s wifi can play together at 20 updates a second without lag or lost packets.</p>
-<p><strong>Your spike.</strong> Is the wifi fast enough at 20 Hz? → <strong>p99 61 ms</strong>. You timed round trips from a laptop to a phone on your home wifi.</p>
-<p><strong>We broke it.</strong> We made the echo program never reply, a total network outage → <strong>114 tests, all green</strong>, and the report still shows 0% loss.</p>
+<p><strong>What it does.</strong> A team game over a local network: build bridges between floating platforms and break the other team’s bed.</p>
+<p><strong>What you found in Homework 4.</strong> On your home wifi, between a laptop and a phone, no game messages were lost, but the slowest ones were too slow for smooth play.</p>
+<p><strong>So right now:</strong> nobody knows yet whether two laptops can play on the classroom wifi.</p>
 <p><em>A test would go red if …</em></p>
 </section>
 <section id="plant_care" class="slide level2 meres">
 <h2 class="meres">plant_care</h2>
-<p><strong>The promise.</strong> Each card counts down to when the plant really needs watering.</p>
-<p><strong>Your spike.</strong> Do the watering days match a horticultural source? → <strong>0 of 12 give days</strong>. You checked 12 plants against RHS pages; none states a day count.</p>
-<p><strong>We broke it.</strong> We set the cactus to be watered every day and the Boston fern every 60 days → <strong>122 tests, all green.</strong></p>
+<p><strong>What it does.</strong> Each houseplant gets a card that counts down to its next watering.</p>
+<p><strong>What you found in Homework 4.</strong> You looked up 12 plants with a gardening society: none gives a number of days, only soil dryness or season.</p>
+<p><strong>So right now:</strong> The countdown is a starting guess, and the app now says so.</p>
 <p><em>A test would go red if …</em></p>
 </section>
 <section id="process-swimlane-generator" class="slide level2 meres">
 <h2 class="meres">Process Swimlane Generator</h2>
-<p><strong>The promise.</strong> Every arrow runs from a task’s box to its next task’s box, without crossing any other box.</p>
-<p><strong>Your spike.</strong> Does it draw real processes? → <strong>4 of 5</strong>. You ran five real, anonymised workplace processes and judged each diagram yourself.</p>
-<p><strong>We broke it.</strong> We bent every arrow back into its own box, so none reaches the next task → <strong>28 tests green, exactly as before</strong> (the 4 red ones are Windows-only).</p>
+<p><strong>What it does.</strong> From a table describing a workplace process, it draws a diagram: a lane per department, a box per task, arrows for the order.</p>
+<p><strong>What you found in Homework 4.</strong> On five real, anonymised processes, four worked; one failed because it really has a yes-or-no branch.</p>
+<p><strong>So right now:</strong> nobody has checked that long processes stay readable, or that each arrow lands on the next task.</p>
 <p><em>A test would go red if …</em></p>
 </section>
 <section id="rc-atlas" class="slide level2 meres">
 <h2 class="meres">RC Atlas</h2>
-<p><strong>The promise.</strong> Each role sees only its own workflow buttons: field submits, MEAL validates, the manager approves.</p>
-<p><strong>Your spike.</strong> How many steps survive before saving fails? → <strong>10 of 10</strong>. You ran a fixed 10-step workflow on a fresh install and counted the steps that worked.</p>
-<p><strong>We broke it.</strong> We switched off the condition that shows the MEAL officer the Validate button → <strong>201 tests, all green.</strong></p>
+<p><strong>What it does.</strong> A programme manager, a field coordinator and a monitoring officer pass tasks along: assign, do, submit, check, approve, and the project status follows.</p>
+<p><strong>What you found in Homework 4.</strong> On a fresh install, a fixed ten-step workflow saved every step: 10 of 10.</p>
+<p><strong>So right now:</strong> nobody has checked that each person sees only the buttons meant for their role.</p>
 <p><em>A test would go red if …</em></p>
 </section>
 <section id="reposcout" class="slide level2 meres">
 <h2 class="meres">RepoScout</h2>
-<p><strong>The promise.</strong> “6 active in the last 3 months” counts the repos that had a commit in the last 3 months.</p>
-<p><strong>Your spike.</strong> How wrong is “last updated”? → <strong>5 of 50 misfiled</strong>. You compared GitHub’s push date with each repo’s real last commit.</p>
-<p><strong>We broke it.</strong> We made every repo count as “active”, whatever its dates → <strong>47 tests, all green.</strong></p>
+<p><strong>What it does.</strong> Type a topic; it ranks GitHub projects and says how alive the field is.</p>
+<p><strong>What you found in Homework 4.</strong> You compared GitHub’s “last updated” date with each project’s real last change: 5 of 50 landed in the wrong group.</p>
+<p><strong>So right now:</strong> A few projects it calls active may not really have changed lately.</p>
 <p><em>A test would go red if …</em></p>
 </section>
 <section id="route-tariff-and-capacity-fee-calculator" class="slide level2 meres">
 <h2 class="meres">Route Tariff and Capacity Fee Calculator</h2>
-<p><strong>The promise.</strong> For a route and period, the screen shows the cheapest way to book it, with the saving.</p>
-<p><strong>Your spike.</strong> How much does exact cover overpay? → <strong>worst 135.8%</strong>. You compared the exact-cover plan with the cheapest over-booking plan in 1,050 cases.</p>
-<p><strong>We broke it.</strong> We made the yearly product cost almost nothing; the “cheapest” route did not change → <strong>53 route tests, all green.</strong></p>
+<p><strong>What it does.</strong> A gas trader picks a pipeline point and period and gets the cheapest way to book capacity.</p>
+<p><strong>What you found in Homework 4.</strong> Booking a little more time than needed was cheaper in four of ten realistic cases.</p>
+<p><strong>So right now:</strong> it now books extra time, but never considers a whole-year booking.</p>
 <p><em>A test would go red if …</em></p>
 </section>
 <section id="sentmine" class="slide level2 meres">
 <h2 class="meres">sentmine</h2>
-<p><strong>The promise.</strong> If a word is in your known list, its -s, -ed and -ing forms do not become cards either.</p>
-<p><strong>Your spike.</strong> How many cards are really new words? → <strong>4 of 103</strong>. You marked by hand every card from a 1,220-word Guardian article.</p>
-<p><strong>We broke it.</strong> We limited the -e rule to short words, so “promise” no longer covers “promising” → <strong>225 tests, all green.</strong></p>
+<p><strong>What it does.</strong> From an English text you just read, it makes a flashcard for each new word, in its real sentence.</p>
+<p><strong>What you found in Homework 4.</strong> You checked every card from one newspaper article by hand: 4 of 103 were really new words.</p>
+<p><strong>So right now:</strong> Most cards are known words or names, so the learner still sorts them by hand.</p>
 <p><em>A test would go red if …</em></p>
 </section>
 <section id="stardew-valley-auto-gifter" class="slide level2 meres">
 <h2 class="meres">Stardew Valley Auto-Gifter</h2>
-<p><strong>The promise.</strong> A villager who already got two gifts this week, or one today, gets no more automatic gifts.</p>
-<p><strong>Your spike.</strong> Does the chest keep its colour? → <strong>3 of 3 openings</strong>. You logged the chest colour at every opening, also after save and reload.</p>
-<p><strong>We broke it.</strong> We could not run it, but the gift-limit code is not even in the test build → <strong>the 11 tests cannot go red.</strong></p>
+<p><strong>What it does.</strong> A Stardew Valley add-on: it plans tomorrow’s gifts for villagers from a chest, you approve the plan, and it hands them over as you walk past.</p>
+<p><strong>What you found in Homework 4.</strong> The specially marked chest kept its colour at all 3 openings, also after saving and reloading.</p>
+<p><strong>So right now:</strong> a villager who already got a gift today may still get another one.</p>
 <p><em>A test would go red if …</em></p>
 </section>
 <section id="surveyguard-numeric-careless-responding-detector" class="slide level2 meres">
 <h2 class="meres">SurveyGuard: Numeric Careless Responding Detector</h2>
-<p><strong>The promise.</strong> A respondent who gives the same answer to every item is marked suspicious, ready to be excluded.</p>
-<p><strong>Your spike.</strong> How many clean respondents get flagged? → <strong>25.4% · 71.9%</strong>. You ran the three flags on 1,000 public personality-test responses.</p>
-<p><strong>We broke it.</strong> We made the score mark nobody as suspicious, ever → <strong>15 tests, all green.</strong></p>
+<p><strong>What it does.</strong> It marks survey respondents who seem to answer carelessly, for example the same answer everywhere, and says why.</p>
+<p><strong>What you found in Homework 4.</strong> On real public survey data, one of its checks, at the old setting, flagged about 7 in 10 ordinary respondents.</p>
+<p><strong>So right now:</strong> someone who gives the same answer to every question is not marked suspicious.</p>
 <p><em>A test would go red if …</em></p>
 </section>
 <section id="toto-estimator" class="slide level2 meres">
 <h2 class="meres">Toto Estimator</h2>
-<p><strong>The promise.</strong> On matches it has not seen, the predictor gets more results right than always tipping “1”.</p>
-<p><strong>Your spike.</strong> Better than “always 1”? → <strong>40% vs 46%</strong>. On a held-out season of 380 real English league matches, your predictor against always “1”.</p>
-<p><strong>We broke it.</strong> We made it predict “1” for every match → <strong>38 tests, all green.</strong></p>
+<p><strong>What it does.</strong> Enter this week’s Toto matches; it tips home win, draw or away win from past results.</p>
+<p><strong>What you found in Homework 4.</strong> On a real English season it had not seen: 40% right, against 46% for always tipping a home win.</p>
+<p><strong>So right now:</strong> Always tipping a home win currently scores better than its tips.</p>
 <p><em>A test would go red if …</em></p>
 </section>
 <section id="volleyball-statistics-tracker" class="slide level2 meres">
 <h2 class="meres">Volleyball Statistics Tracker</h2>
-<p><strong>The promise.</strong> Paste a real CEV match URL, and the team totals come out the same as CEV’s own.</p>
-<p><strong>Your spike.</strong> Do the totals match the CEV sheet? → <strong>22 of 24 cells</strong>. You compared your totals, cell by cell, with CEV’s printed Team Totals row.</p>
-<p><strong>We broke it.</strong> We swapped two columns in the importer: attack errors and blocked attacks → <strong>20 tests, all green.</strong></p>
+<p><strong>What it does.</strong> It turns European volleyball match reports into team and player summaries.</p>
+<p><strong>What you found in Homework 4.</strong> You compared its team totals with the federation’s own sheet: 22 of 24 matched exactly, the rest only by rounding.</p>
+<p><strong>So right now:</strong> Correct today, but only a small hand-made sample is checked, not a real full report.</p>
 <p><em>A test would go red if …</em></p>
 </section>
 <section id="homework-5-make-it-usable" class="slide level2 halk">
