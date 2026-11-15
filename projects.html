@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The projects — Advanced Programming (ESST-PROG2), ELTE, Autumn 2026</title>
+<meta name="description" content="The students' own programs, each with its promo page on GitHub Pages. ELTE TáTK, Advanced Programming, Autumn 2026.">
+<link rel="stylesheet" href="betuk/betuk.css">
+<style>
+:root{
+  --papir:#FBFAF7; --papir-melyebb:#F1EEE7; --tinta:#17191C; --tinta-halvany:#5E626A;
+  --vonal:#DBD6CC; --allitas:#9A6B10; --allitas-halvany:#F6EEDC;
+  --meres:#0E5560; --meres-halvany:#E2EDEF;
+  --betu-proza:"Source Serif 4",Charter,Georgia,serif;
+  --betu-jelzes:"Source Sans 3",-apple-system,"Segoe UI",system-ui,sans-serif;
+  --betu-kod:"Source Code Pro",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --papir:#14161A; --papir-melyebb:#1E2127; --tinta:#F2F0EB; --tinta-halvany:#A2A7B0;
+    --vonal:#343941; --allitas:#E0B45A; --allitas-halvany:#2A2418;
+    --meres:#7FC3CE; --meres-halvany:#12262B;
+  }
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--papir);color:var(--tinta);
+  font-family:var(--betu-proza);font-size:19px;line-height:1.5;
+  -webkit-font-smoothing:antialiased}
+.wrap{max-width:44rem;margin:0 auto;padding:clamp(2rem,6vw,4.5rem) clamp(1.1rem,5vw,2rem) 4rem}
+.jelzes{font-family:var(--betu-jelzes);font-size:.7rem;font-weight:600;
+  letter-spacing:.12em;text-transform:uppercase;color:var(--tinta-halvany)}
+h1{font-size:clamp(2.1rem,7vw,3.1rem);line-height:1.1;font-weight:600;
+  margin:.5rem 0 0;letter-spacing:-.015em}
+.lead{font-size:1.12rem;color:var(--tinta-halvany);margin:1.1rem 0 0;max-width:34rem}
+hr{border:0;border-top:1px solid var(--vonal);margin:2.75rem 0}
+h2{font-family:var(--betu-jelzes);font-size:.72rem;font-weight:600;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--tinta-halvany);margin:0 0 1rem}
+
+
+.wrap{max-width:68rem}
+h1{margin-top:1.4rem}
+.vissza{font-family:var(--betu-jelzes);font-size:.82rem;font-weight:600;color:var(--meres);text-decoration:none}
+.racs{list-style:none;margin:0;padding:0;display:grid;gap:2.2rem 1.6rem;
+  grid-template-columns:repeat(auto-fill,minmax(min(100%,19rem),1fr))}
+.kartya{display:block;color:inherit;text-decoration:none}
+.kartya img{display:block;width:100%;height:auto;aspect-ratio:8/5;object-fit:cover;object-position:top;
+  border:1px solid var(--vonal);border-radius:3px;background:var(--papir-melyebb);
+  transition:transform .15s ease,box-shadow .15s ease}
+.kartya:hover img{transform:translateY(-2px);box-shadow:0 6px 18px rgba(0,0,0,.08)}
+.nev{display:block;font-weight:600;font-size:1.05rem;line-height:1.25;margin:.75rem 0 .2rem}
+.helyorzo{display:flex;align-items:center;justify-content:center;aspect-ratio:8/5;
+  border:1px dashed var(--vonal);border-radius:3px;
+  background:repeating-linear-gradient(-45deg,var(--papir-melyebb) 0 14px,var(--papir) 14px 28px)}
+.helyorzo span{font-family:var(--betu-jelzes);font-size:.75rem;font-weight:600;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--tinta-halvany);background:var(--papir);padding:.45rem .8rem;
+  border:1px solid var(--vonal);border-radius:2px}
+.kartya:focus-visible{outline:none}
+.kartya:focus-visible img,.kartya:focus-visible .helyorzo{outline:2px solid var(--meres);outline-offset:3px}
+.vissza:focus-visible{outline:2px solid var(--meres);outline-offset:3px;border-radius:2px}
+::selection{background:var(--meres-halvany);color:var(--tinta)}
+@media (prefers-reduced-motion:reduce){.kartya img{transition:none}.kartya:hover img{transform:none}}
+.kartya:hover .nev{color:var(--meres)}
+.tag{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;
+  font-size:.88rem;line-height:1.4;color:var(--tinta-halvany)}
+a{color:var(--meres)}
+.megj{font-family:var(--betu-jelzes);font-size:.78rem;color:var(--tinta-halvany);margin:2.5rem 0 0}
+footer{margin-top:3rem;font-family:var(--betu-jelzes);font-size:.78rem;color:var(--tinta-halvany);line-height:1.6}
+footer a{color:var(--tinta-halvany)}
+</style>
+
+<div class="wrap">
+  <header>
+    <a class="vissza" href="./">← Advanced Programming</a>
+    <h1>The projects</h1>
+    <p class="lead">Each student brought a program of their own and built it
+    through the term. These are their promo pages: what the program is for, who
+    it is for, and how to try it.</p>
+  </header>
+
+  <hr>
+
+  <ul class="racs">
+    <li><a class="kartya" href="https://esst-prog2.github.io/AlterEgo_Finder/">
+      <img src="projects/alterego-finder.webp" width="800" height="500" loading="lazy" alt="">
+      <span class="nev">AlterEgo Finder</span>
+      <span class="tag">A lookalike finder that says Not You</span>
+    </a></li>
+    <li><a class="kartya" href="https://esst-prog2.github.io/stardew-auto-gifter/">
+      <img src="projects/stardew-auto-gifter.webp" width="800" height="500" loading="lazy" alt="">
+      <span class="nev">Auto-Gifter</span>
+      <span class="tag">Walk past, they get their gift</span>
+    </a></li>
+    <li><a class="kartya" href="https://esst-prog2.github.io/Bank_Data/">
+      <img src="projects/bank-data.webp" width="800" height="500" loading="lazy" alt="">
+      <span class="nev">Bank_Data</span>
+      <span class="tag">European bank figures, traced to the filing</span>
+    </a></li>
+    <li><a class="kartya" href="https://esst-prog2.github.io/budget-planner/">
+      <img src="projects/budget-planner.webp" width="800" height="500" loading="lazy" alt="">
+      <span class="nev">Budget Planner</span>
+      <span class="tag">A budget planner for international students in Budapest</span>
+    </a></li>
+    <li><a class="kartya" href="https://esst-prog2.github.io/CAUSAL-LAB-A-Virtual-Laboratory-for-Causal-Research/">
+      <img src="projects/causal-lab-a-virtual-laboratory-for-causal-research.webp" width="800" height="500" loading="lazy" alt="">
+      <span class="nev">Causal Lab</span>
+      <span class="tag">It reads your research question before it picks a method</span>
+    </a></li>
+    <li><a class="kartya" href="https://esst-prog2.github.io/Airplane-flight-data-viz/">
+      <img src="projects/airplane-flight-data-viz.webp" width="800" height="500" loading="lazy" alt="">
+      <span class="nev">Central European Air Traffic</span>
+      <span class="tag">A live map of the planes over Central Europe, backed by a data warehouse recording the sky every two minutes</span>
+    </a></li>
+    <li><a class="kartya" href="https://esst-prog2.github.io/chatgpt-ads-by-industry/">
+      <img src="projects/chatgpt-ads-by-industry.webp" width="800" height="500" loading="lazy" alt="">
+      <span class="nev">ChatGPT Ads Industry Dashboard</span>
+      <span class="tag">Internal tool for the PPC team: ChatGPT Ads CPC and CTR by industry, from accounts we manage</span>
+    </a></li>
+    <li><a class="kartya" href="https://esst-prog2.github.io/Menstrual-Cycle-Phase-Calculator-Targeted-Nutrition-Planner/">
+      <img src="projects/menstrual-cycle-phase-calculator-targeted-nutrition-planner.webp" width="800" height="500" loading="lazy" alt="">
+      <span class="nev">Cycle Nutrition Planner</span>
+      <span class="tag">A cycle food planner that tells you when it&#x27;s guessing</span>
+    </a></li>
+    <li><a class="kartya" href="https://esst-prog2.github.io/deriva/">
+      <img src="projects/deriva.webp" width="800" height="500" loading="lazy" alt="">
+      <span class="nev">deriva</span>
+      <span class="tag">Know what changed in ENEMDU</span>
+    </a></li>
+    <li><a class="kartya" href="https://esst-prog2.github.io/EU-Data-Skill-Demand/">
+      <img src="projects/eu-data-skill-demand.webp" width="800" height="500" loading="lazy" alt="">
+      <span class="nev">EU Data Career Compass</span>
+      <span class="tag">European Tech Job Market Analysis</span>
+    </a></li>
+    <li><a class="kartya" href="https://esst-prog2.github.io/Financial-Planner/promo/">
+      <img src="projects/financial-planner.webp" width="800" height="500" loading="lazy" alt="">
+      <span class="nev">Expense Overview</span>
+      <span class="tag">One view for everything you spend</span>
+    </a></li>
+    <li><a class="kartya" href="https://esst-prog2.github.io/fraudsense/">
+      <img src="projects/fraudsense.webp" width="800" height="500" loading="lazy" alt="">
+      <span class="nev">fraudsense</span>
+      <span class="tag">A shortlist of the transactions worth a second look, each with the reason it was picked</span>
+    </a></li>
+    <li><a class="kartya" href="https://luisjimenezjs.github.io/market-research-platform-site/">
+      <img src="projects/market-research-platform.webp" width="800" height="500" loading="lazy" alt="">
+      <span class="nev">Market Research Platform</span>
+      <span class="tag">A browser-only tool that regroups a survey export into research objectives, compares segments, writes the report and clusters respondents</span>
+    </a></li>
+    <li><a class="kartya" href="https://esst-prog2.github.io/MarketLens/">
+      <img src="projects/marketlens.webp" width="800" height="500" loading="lazy" alt="">
+      <span class="nev">MarketLens</span>
+      <span class="tag">Keep the model honest</span>
+    </a></li>
+    <li><a class="kartya" href="https://esst-prog2.github.io/ms_match/promo/">
+      <img src="projects/ms-match.webp" width="800" height="500" loading="lazy" alt="">
+      <span class="nev">Ms. Match</span>
+      <span class="tag">Let today&#x27;s weather pick today&#x27;s outfit</span>
+    </a></li>
+    <li><a class="kartya" href="https://esst-prog2.github.io/Photo-duplicate-finder/site/">
+      <img src="projects/photo-duplicate-finder.webp" width="800" height="500" loading="lazy" alt="">
+      <span class="nev">Photo Duplicate Finder</span>
+      <span class="tag">A command-line tool that groups look-alike photos from a folder and writes one Excel table per group, with the best copy highlighted</span>
+    </a></li>
+    <li><a class="kartya" href="https://esst-prog2.github.io/plant_care/">
+      <img src="projects/plant-care.webp" width="800" height="500" loading="lazy" alt="">
+      <span class="nev">plant_care</span>
+      <span class="tag">A watering tracker that lives in your real calendar</span>
+    </a></li>
+    <li><a class="kartya" href="https://esst-prog2.github.io/process-swimlane-generator/">
+      <img src="projects/process-swimlane-generator.webp" width="800" height="500" loading="lazy" alt="">
+      <span class="nev">Process Swimlane Generator</span>
+      <span class="tag">Excel to swimlanes</span>
+    </a></li>
+    <li><a class="kartya" href="https://esst-prog2.github.io/RC_ATLAS_Project/">
+      <img src="projects/rc-atlas-project.webp" width="800" height="500" loading="lazy" alt="">
+      <span class="nev">RC Atlas</span>
+      <span class="tag">From institutional data to coordinated action</span>
+    </a></li>
+    <li><a class="kartya" href="https://esst-prog2.github.io/RepoScout/">
+      <img src="projects/reposcout.webp" width="800" height="500" loading="lazy" alt="">
+      <span class="nev">RepoScout</span>
+      <span class="tag">Is your idea&#x27;s corner of GitHub alive?</span>
+    </a></li>
+    <li><a class="kartya" href="https://esst-prog2.github.io/Route-tariff-and-Capacity-fee-Calculator/">
+      <img src="projects/route-tariff-and-capacity-fee-calculator.webp" width="800" height="500" loading="lazy" alt="">
+      <span class="nev">Route Tariff and Capacity Fee Calculator</span>
+      <span class="tag">Click the border points on a map, see what a gas route across Central and Eastern Europe costs, and know what to book without asking anyone</span>
+    </a></li>
+    <li><a class="kartya" href="https://esst-prog2.github.io/Sentmine/">
+      <img src="projects/sentmine.webp" width="800" height="500" loading="lazy" alt="">
+      <span class="nev">sentmine</span>
+      <span class="tag">Read the real page, click a word, get an Anki card</span>
+    </a></li>
+    <li><a class="kartya" href="https://esst-prog2.github.io/surveyguard/">
+      <img src="projects/surveyguard.webp" width="800" height="500" loading="lazy" alt="">
+      <span class="nev">SurveyGuard</span>
+      <span class="tag">SurveyGuard finds careless survey respondents: straightlining, contradictory answers, and multivariate outliers, with a cleaned file and a report that explains every flag</span>
+    </a></li>
+    <li><a class="kartya" href="https://esst-prog2.github.io/Detective-game-with-AI-agents/">
+      <img src="projects/detective-game-with-ai-agents.webp" width="800" height="500" loading="lazy" alt="">
+      <span class="nev">The Ashcroft Manor Murder</span>
+      <span class="tag">Explore Ashcroft Manor, question three suspects and compare evidence in an illustrated detective game</span>
+    </a></li>
+    <li><a class="kartya epul" href="https://github.com/esst-prog2/toto">
+      <span class="helyorzo" role="img" aria-label="Page under construction"><span>Under construction</span></span>
+      <span class="nev">Toto Estimator</span>
+      <span class="tag">Its page is on the way. Until then, the code is on GitHub</span>
+    </a></li>
+    <li><a class="kartya" href="https://esst-prog2.github.io/volleyball-statistics-tracker/">
+      <img src="projects/volleyball-statistics-tracker.webp" width="800" height="500" loading="lazy" alt="">
+      <span class="nev">Volleyball Statistics Tracker</span>
+      <span class="tag">See more than the final score</span>
+    </a></li>
+  </ul>
+
+  <p class="megj">Pages as of 15 November 2026. Each page belongs to its author; click through to try the program.</p>
+
+  <footer>
+    Instructor: Árpád Tamási · <a href="mailto:arpad.tamasi@goschool.ai">arpad.tamasi@goschool.ai</a><br>
+    Source: <a href="https://github.com/esst-prog2">github.com/esst-prog2</a>
+  </footer>
+</div>

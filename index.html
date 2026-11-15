@@ -43,6 +43,17 @@ h2{font-family:var(--betu-jelzes);font-size:.72rem;font-weight:600;letter-spacin
 .most .cim{font-size:1.5rem;font-weight:600;line-height:1.2;margin:.3rem 0 .45rem}
 .most .nyil{font-family:var(--betu-jelzes);font-size:.82rem;font-weight:600;color:var(--meres)}
 
+/* projects teaser */
+.projektek{background:var(--papir-melyebb);border-left:0;padding:1.25rem}
+.projektek:hover{transform:none}
+.projektek:hover .cim{color:var(--meres)}
+.projektek:focus-visible{outline:2px solid var(--meres);outline-offset:3px}
+.projektek .nyil{color:var(--meres)}
+.belyegek{display:grid;grid-template-columns:repeat(4,1fr);gap:.5rem;margin-bottom:1rem}
+.belyegek img{display:block;width:100%;aspect-ratio:8/5;object-fit:cover;object-position:top;
+  border:1px solid var(--vonal);border-radius:2px}
+@media (max-width:30rem){.belyegek{grid-template-columns:repeat(2,1fr)}}
+
 /* schedule */
 table{width:100%;border-collapse:collapse;font-size:.92rem}
 th{font-family:var(--betu-jelzes);font-size:.66rem;font-weight:600;letter-spacing:.1em;
@@ -82,6 +93,20 @@ footer a{color:var(--tinta-halvany)}
     <div class="nyil">Open the slides (PDF) →</div>
   </a>
   <p class="megj">Or <a class="dia" href="08.html">present them in the browser</a>.</p>
+
+  <hr>
+
+  <h2>The projects</h2>
+  <a class="most projektek" href="projects.html">
+    <span class="belyegek" aria-hidden="true">
+      <img src="projects/airplane-flight-data-viz.webp" alt="">
+      <img src="projects/bank-data.webp" alt="">
+      <img src="projects/ms-match.webp" alt="">
+      <img src="projects/marketlens.webp" alt="">
+    </span>
+    <div class="cim">The programs of this term, each with its own page</div>
+    <div class="nyil">See them all →</div>
+  </a>
 
   <hr>
 
