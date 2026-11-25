@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Course Survey — Advanced Programming</title>
+<meta name="description" content="End-of-course survey of Advanced Programming (ELTE, autumn 2026). Anonymous.">
+<link rel="stylesheet" href="../betuk/betuk.css">
+<style>
+:root{
+  --papir:#FBFAF7; --papir-melyebb:#F1EEE7; --tinta:#17191C; --tinta-halvany:#5E626A;
+  --vonal:#DBD6CC; --meres:#0E5560; --meres-halvany:#E2EDEF; --hiba:#9B2C2C;
+  --betu-proza:"Source Serif 4",Charter,Georgia,serif;
+  --betu-jelzes:"Source Sans 3",-apple-system,"Segoe UI",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --papir:#14161A; --papir-melyebb:#1E2127; --tinta:#F2F0EB; --tinta-halvany:#A2A7B0;
+    --vonal:#343941; --meres:#7FC3CE; --meres-halvany:#12262B; --hiba:#F19A9A;
+  }
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--papir);color:var(--tinta);
+  font-family:var(--betu-proza);font-size:18px;line-height:1.5;-webkit-font-smoothing:antialiased}
+.wrap{max-width:42rem;margin:0 auto;padding:clamp(2rem,6vw,4rem) clamp(1rem,5vw,2rem) 4rem}
+.jelzes{font-family:var(--betu-jelzes);font-size:.7rem;font-weight:600;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--tinta-halvany)}
+h1{font-size:clamp(1.9rem,6vw,2.6rem);line-height:1.1;font-weight:600;margin:.5rem 0 0;letter-spacing:-.015em}
+.lead{color:var(--tinta-halvany);margin:1rem 0 0}
+h2{font-family:var(--betu-jelzes);font-size:.72rem;font-weight:600;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--tinta-halvany);margin:2.6rem 0 0;padding-top:1.4rem;
+  border-top:1px solid var(--vonal)}
+fieldset{border:0;margin:1.6rem 0 0;padding:0;min-width:0}
+legend{font-weight:600;padding:0;margin-bottom:.6rem}
+.hint{font-family:var(--betu-jelzes);font-size:.82rem;color:var(--tinta-halvany);margin:-.3rem 0 .6rem}
+.scale{display:flex;flex-wrap:wrap;gap:.4rem;align-items:center}
+.scale .end{font-family:var(--betu-jelzes);font-size:.8rem;color:var(--tinta-halvany)}
+label.opt{display:flex;gap:.55rem;align-items:flex-start;font-family:var(--betu-jelzes);
+  font-size:.95rem;padding:.3rem 0;cursor:pointer}
+label.opt input{margin-top:.3rem;accent-color:var(--meres)}
+.scale label.opt{border:1px solid var(--vonal);border-radius:3px;padding:.35rem .7rem}
+.scale label.opt:has(input:checked){border-color:var(--meres);background:var(--meres-halvany)}
+textarea{width:100%;min-height:5.5rem;font:inherit;font-size:1rem;color:var(--tinta);
+  background:var(--papir-melyebb);border:1px solid var(--vonal);border-radius:3px;padding:.6rem .7rem}
+textarea:focus,input:focus-visible{outline:2px solid var(--meres);outline-offset:2px}
+button{margin-top:2.4rem;font-family:var(--betu-jelzes);font-size:1rem;font-weight:600;
+  color:var(--papir);background:var(--meres);border:0;border-radius:3px;padding:.75rem 1.4rem;cursor:pointer}
+button:disabled{opacity:.5;cursor:default}
+.msg{font-family:var(--betu-jelzes);font-size:.95rem;margin-top:1rem}
+.msg.err{color:var(--hiba)}
+.done{background:var(--meres-halvany);border-left:3px solid var(--meres);padding:1.2rem 1.4rem;margin-top:2rem}
+footer{margin-top:3rem;font-family:var(--betu-jelzes);font-size:.78rem;color:var(--tinta-halvany)}
+footer a{color:var(--tinta-halvany)}
+</style>
+
+<div class="wrap">
+  <div class="jelzes">ESST-PROG2 · End-of-course survey</div>
+  <h1>Advanced Programming</h1>
+  <p class="lead">About ten minutes, plus as long as you like for your ideas. No name, login or e-mail is sent with your answers, and
+    nothing here affects your grade. Every question is optional, and criticism helps more
+    than praise. Open until Saturday 19 December, 20:00.</p>
+  <p class="hint" style="margin-top:.8rem">In free-text answers, leave out project names, repository names and people's names if you want to stay unrecognisable.</p>
+
+  <form id="f" novalidate>
+    <h2>Where you started, where you are</h2>
+    <fieldset data-q="q1" data-type="scale">
+      <legend>1. In September, how confident were you that you could build a complete, working program with an AI coding assistant?</legend>
+    </fieldset>
+    <fieldset data-q="q2" data-type="scale">
+      <legend>2. And now?</legend>
+    </fieldset>
+
+    <h2>The parts of the course</h2>
+    <fieldset data-q="q3" data-type="list" data-max="3">
+      <legend>3. Which parts helped you most?</legend>
+      <p class="hint">Up to three.</p>
+    </fieldset>
+    <fieldset>
+      <legend>What made the most useful one useful?</legend>
+      <textarea name="q3_note"></textarea>
+    </fieldset>
+    <fieldset data-q="q4" data-type="list">
+      <legend>4. Which parts would you cut or change?</legend>
+      <p class="hint">Any number.</p>
+    </fieldset>
+    <fieldset>
+      <legend>5. If you picked something in Q4: what would you change about it?</legend>
+      <textarea name="q5"></textarea>
+    </fieldset>
+
+    <h2>Working with an AI coding assistant</h2>
+    <fieldset data-q="q6" data-type="choice"
+      data-options="Almost never|Sometimes|About half the time|Usually|Almost always">
+      <legend>6. When your agent wrote code for you, how often did you check it before you accepted it?</legend>
+    </fieldset>
+    <fieldset>
+      <legend>7. Name one thing you now do differently when you work with an AI coding assistant.</legend>
+      <textarea name="q7"></textarea>
+    </fieldset>
+
+    <h2>Pace and workload</h2>
+    <fieldset data-q="q8" data-type="choice"
+      data-options="much too light|a bit light|about right|a bit heavy|much too heavy">
+      <legend>8. The workload, for a 4-credit course, was …</legend>
+    </fieldset>
+    <fieldset data-q="q9" data-type="scale" data-low="rarely" data-high="almost always">
+      <legend>9. The assignment briefs were clear enough to start without asking.</legend>
+    </fieldset>
+
+    <h2>Next year</h2>
+    <fieldset><legend>10. What should stay exactly as it is?</legend><textarea name="q10"></textarea></fieldset>
+    <fieldset><legend>11. What should change first?</legend><textarea name="q11"></textarea></fieldset>
+    <fieldset><legend>12. Do you have ideas or suggestions for this course?</legend>
+      <p class="hint">As many as you like. One idea per line or paragraph. Taking the survey with your coding agent lets you talk them through.</p>
+      <textarea name="q12" style="min-height:9rem"></textarea></fieldset>
+    <fieldset><legend>13. Anything else you want to tell me?</legend><textarea name="q13"></textarea></fieldset>
+
+    <button type="submit" id="send">Send my answers</button>
+    <p class="msg" id="msg" role="status"></p>
+  </form>
+  <div class="done" id="done" hidden>
+    <strong>Thank you.</strong> Your answers have arrived.
+  </div>
+
+  <footer><a href="../">Advanced Programming · course page</a></footer>
+</div>
+
+<script>
+const PARTS = [
+  "The project brief (HW1)",
+  "The specification, and the machine that misreads it (HW2)",
+  "Your MVP with OpenSpec (HW3)",
+  "The spike (HW4)",
+  "Make it usable: one link to reality, tests (HW5)",
+  "Reviewing your whole codebase (HW6)",
+  "The two weeks on your own project (gstack, Impeccable)",
+  "Your page (HW9)",
+  "Your video (HW10)",
+  "Live demos in class",
+  "Consultation time in class",
+  "The personal feedback on your homework",
+];
+const URL_ = "https://firestore.googleapis.com/v1/projects/audience-elte/databases/(default)/documents/survey";
+const CLOSE = Date.UTC(2026, 11, 19, 19, 0);
+
+function opt(type, name, value, text) {
+  const l = document.createElement("label"); l.className = "opt";
+  const i = document.createElement("input"); i.type = type; i.name = name; i.value = value;
+  const s = document.createElement("span"); s.textContent = text;
+  l.append(i, s); return l;
+}
+document.querySelectorAll("fieldset[data-q]").forEach(fs => {
+  const q = fs.dataset.q, t = fs.dataset.type;
+  if (t === "scale") {
+    const w = document.createElement("div"); w.className = "scale";
+    const lo = document.createElement("span"); lo.className = "end"; lo.textContent = fs.dataset.low || "not at all";
+    const hi = document.createElement("span"); hi.className = "end"; hi.textContent = fs.dataset.high || "fully";
+    w.append(lo); for (let n = 1; n <= 5; n++) w.append(opt("radio", q, n, n)); w.append(hi);
+    fs.append(w);
+  } else if (t === "choice") {
+    fs.dataset.options.split("|").forEach(o => fs.append(opt("radio", q, o, o)));
+  } else if (t === "list") {
+    PARTS.forEach(p => fs.append(opt("checkbox", q, p, p)));
+    const max = +fs.dataset.max || 0;
+    if (max) fs.addEventListener("change", () => {
+      const on = fs.querySelectorAll("input:checked").length;
+      fs.querySelectorAll("input").forEach(i => { if (!i.checked) i.disabled = on >= max; });
+    });
+  }
+});
+
+const f = document.getElementById("f"), msg = document.getElementById("msg"), btn = document.getElementById("send");
+if (Date.now() >= CLOSE) { btn.disabled = true; msg.textContent = "The survey is closed."; }
+
+f.addEventListener("submit", async e => {
+  e.preventDefault();
+  const a = { v: 2 };
+  for (const q of ["q1", "q2", "q9"]) { const c = f.querySelector(`input[name=${q}]:checked`); if (c) a[q] = +c.value; }
+  for (const q of ["q6", "q8"]) { const c = f.querySelector(`input[name=${q}]:checked`); if (c) a[q] = c.value; }
+  for (const q of ["q3", "q4"]) {
+    const v = [...f.querySelectorAll(`input[name=${q}]:checked`)].map(i => i.value);
+    if (v.length) a[q] = v;
+  }
+  for (const q of ["q3_note", "q5", "q7", "q10", "q11", "q13"]) {
+    const v = f.elements[q].value.trim(); if (v) a[q] = v;
+  }
+  const ideas = f.elements.q12.value.split(/\n\s*\n|\n/).map(s => s.trim()).filter(Boolean);
+  if (ideas.length) a.q12 = ideas;
+  if (Object.keys(a).length === 1) { msg.className = "msg err"; msg.textContent = "Nothing to send yet."; return; }
+  btn.disabled = true; msg.className = "msg"; msg.textContent = "Sending …";
+  const body = JSON.stringify({ fields: { answers: { stringValue: JSON.stringify(a) }, via: { stringValue: "form" } } });
+  for (let attempt = 0; attempt < 2; attempt++) {
+    try {
+      const r = await fetch(URL_, { method: "POST", headers: { "Content-Type": "application/json" }, body });
+      const j = await r.json();
+      if (r.ok && j.name) { f.hidden = true; document.getElementById("done").hidden = false; window.scrollTo(0, 0); return; }
+    } catch (_) {}
+  }
+  btn.disabled = false; msg.className = "msg err";
+  msg.textContent = "It did not go through. Please try again in a minute; your answers are still here.";
+});
+</script>
